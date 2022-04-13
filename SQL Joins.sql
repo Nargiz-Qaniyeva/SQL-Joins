@@ -5,9 +5,10 @@ CREATE TABLE  Movies(
 Id int primary key,
 MovieName nvarchar (50),
 Duration int
---Point int NOT NULL  --
 )
 
+ALTER TABLE Movies
+Add Point decimal 
 
 CREATE TABLE   Directors(
 Id int primary key,
@@ -51,4 +52,4 @@ GenreId int references Genres (Id),
 
 SELECT * FROM Movies
 SELECT CHARINDEX ('a',MovieName), MovieName FROM Movies 
---SELECT LEN(MovieName) >10 MovieName FROM Movies 
+SELECT LEN(MovieName) [>10] MovieName FROM Movies 
